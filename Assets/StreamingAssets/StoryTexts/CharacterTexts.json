@@ -1,0 +1,62 @@
+{
+	"section": "Character Creation Text",
+	"texts": [
+		{
+			"text": "Welcome to a wonderful tale, a tale of legend and exploration on unknown lands.\nThis legend will feature a great hero, a hero that will start it's path now...\nAnd that hero is ... you!"
+		},
+		{
+			"text": "That's right. YOU are the hero of this wonderful tale.\nBut first, tell us a bit about yourself.\nFor example, what is your name?"
+		},
+		{
+			"text": "Player.Name, I see. It's an interesting name..."
+		},
+		{
+			"text": "Well, then, now it is time to decide how to manifest your power."
+		},
+		{
+			"text": "What? Didn't you know?\nYou have a hidden power to traverse this dungeon, in your quest for Freedom.\nBut in order to use it you should choose a vessel to manifest it."
+		},
+		{
+			"text": "Now, choose how you want to manifest this power.\nSelect your power from the options below.\nWhen you finish selecting your vessel, please press Z."
+		},
+		{
+			"text": "I see. Having chosen the manifestation of your power, you are almost ready...\nNow, the last step is to see how much of your power you can actually incarnate."
+		},
+		{
+			"text": "For this, we will use the the Dices of Willpower.\nI will present you with 4 Dices, that you will be rolling, imbuing them with your power.\nBy doing this, we can see the level of power you will incarnate in your class."
+		},
+		{
+			"text": "Now, press the button on the screen to roll the 4 Dices of Willpower."
+		},
+		{
+			"text": "So that's the ammount of power you will imbue to your class.\nWell then, let's then distribute your power points across your stats."
+		},
+		{
+			"text": "Stats in this game works as follow:\n-HP: Measures your durability to damage, if it reaches 0 you die.\n-L is the Light attack stat, it measures the strength of your normal attack.\n-H is the Heavy attack stat, it measures the strength of stronger attacks.\n-S is the Special sttack stat, which measures the power of the special attacks."
+		},
+		{
+			"text": "Now, you will have to assign the result of each dice to your stats.\n-Use Up/Down arrow to select stat.\n-Use Left/Right arrow to select the result to assign.\nOnce you have assigned each stat, the confirm button will be enabled.\n\n(Note: A point in HP gives you +20 on that stat)."
+		},
+		{
+			"text": "So that's how your assignation will be. Interesting.\nNow we have reached the last step of your incarnation on this world.\nChoosing your Skills."
+		},
+		{
+			"text": "Skills are basically the moves you use to fight.\nYou can assign one skill to each slot (L/H/S).\nThe skills you can assign, depend of the amount of power you chose for each stat."
+		},
+		{
+			"text": "Now I'll show you the skills for the Light attack of your class.\n-Use Up/Down arrow to select the skill, and press Z to select it.\nYou'll be shown the skill description after selecting it.\nPress Confirm if you agree with it, and Cancel to choose another one."
+		},
+		{
+			"text": "Now I'll show you the skills for the Heavy attack of your class.\n-Use Up/Down arrow to select the skill, and press Z to select it.\nYou'll be shown the skill description after selecting it.\nPress Confirm if you agree with it, and Cancel to choose another one."
+		},
+		{
+			"text": "Now I'll show you the skills for the Special attack of your class.\n-Use Up/Down arrow to select the skill, and press Z to select it.\nYou'll be shown the skill description after selecting it.\nPress Confirm if you agree with it, and Cancel to choose another one."
+		},
+		{
+			"text": "It seems you've already finished choosing your skills.\nNow your embodiment into this world is complete, and you can finally start your quest."
+		},
+		{
+			"text": "Your quest is as follows. You are trapped inside a forest with some weird paths.\nYour mission, find the exit and return to the kingdom.\nWhen you are ready, press the button to enter the adventure."
+		}
+	]
+}

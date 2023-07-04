@@ -1,0 +1,125 @@
+{
+	"enemies": [
+		{
+			"Name": "Werewolf",
+			"image": 3,
+			"HP": 60,
+			"Light_attack_stat": 4,
+			"Heavy_attack_stat": 3,
+			"Special_attack_stat": 5,
+			"heavy_numbers": "2,3",
+			"special_numbers": "5",
+			"skills": [
+				{
+					"name": "Scratch", 
+					"description": "",
+					"type": "L",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":false,
+					"effect": null
+				},
+				{
+					"name": "Bite", 
+					"description": "",
+					"type": "H",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":false,
+					"effect": null
+				},
+				{
+					"name": "Double Down", 
+					"description": "",
+					"type": "S",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":true,
+					"effect": {
+						"has_damage_modification": false,
+						"damage_modfication": null,
+						"has_status_condition": true,
+						"status_condition": {
+							"type": "variable",
+							"status": "Bleed"
+						},
+						"has_cure": false,
+						"cure": null,
+						"has_damage_mitigation": false,
+						"damage_mitigation": null
+					}
+				}
+			]
+		},
+		{
+			"Name": "High Ogre",
+			"image": 4,
+			"HP": 80,
+			"Light_attack_stat": 4,
+			"Heavy_attack_stat": 3,
+			"Special_attack_stat": 5,
+			"heavy_numbers": "3,5",
+			"special_numbers": "1",
+			"skills": [
+				{
+					"name": "Punch", 
+					"description": "",
+					"type": "L",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":false,
+					"effect": null
+				},
+				{
+					"name": "Double Punch", 
+					"description": "",
+					"type": "H",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":true,
+					"effect": {
+						"has_damage_modification": true,
+						"damage_modfication": {
+							"type": "fixed",
+							"modification": "0.5",
+							"target": "same"
+						},
+						"has_status_condition": false,
+						"status_condition": null,
+						"has_cure": false,
+						"cure": null,
+						"has_damage_mitigation": false,
+						"damage_mitigation": null
+					}
+				},
+				{
+					"name": "Stunning Hit", 
+					"description": "",
+					"type": "S",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":true,
+					"effect": {
+						"has_damage_modification": false,
+						"damage_modfication": null,
+						"has_status_condition": true,
+						"status_condition": {
+							"type": "variable",
+							"status": "Paralysis"
+						},
+						"has_cure": false,
+						"cure": null,
+						"has_damage_mitigation": false,
+						"damage_mitigation": null
+					}
+				}
+			]
+		}
+	]
+}

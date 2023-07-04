@@ -1,0 +1,84 @@
+{
+	"items": [
+		{
+			"id": 0,
+			"name": "Small Potion",
+			"description": "Restores 30 HP",
+			"effect": "heal",
+			"affected_stat": "HP",
+			"amount": 30
+		},
+		{
+			"id": 1,
+			"name": "Middle Potion",
+			"description": "Restores 50 HP",
+			"effect": "heal",
+			"affected_stat": "HP",
+			"amount": 50
+		},
+		{
+			"id": 2,
+			"name": "Large Potion",
+			"description": "Restores Full HP",
+			"effect": "heal",
+			"affected_stat": "HP",
+			"amount": 999
+		},
+		{
+			"id": 3,
+			"name": "Burn Heal",
+			"description": "Cures Burn status",
+			"effect": "cure",
+			"affected_stat": "Burn",
+			"amount": 0
+		},
+		{
+			"id": 4,
+			"name": "Poison Heal",
+			"description": "Cures Poison status",
+			"effect": "cure",
+			"affected_stat": "Poison",
+			"amount": 0
+		},
+		{
+			"id": 5,
+			"name": "Bleed Heal",
+			"description": "Cures Bleed status",
+			"effect": "cure",
+			"affected_stat": "Bleed",
+			"amount": 0
+		},
+		{
+			"id": 6,
+			"name": "Paralysis Heal",
+			"description": "Cures Paralysis status",
+			"effect": "cure",
+			"affected_stat": "Paralysis",
+			"amount": 0
+		},
+		{
+			"id": 7,
+			"name": "Power Potion L",
+			"description": "Increses your L stat +3 for your next attack",
+			"effect": "increase",
+			"affected_stat": "L",
+			"amount": 3
+		},
+		{
+			"id": 8,
+			"name": "Power Potion H",
+			"description": "Increses your H stat +3 for your next attack",
+			"effect": "increase",
+			"affected_stat": "H",
+			"amount": 3
+		},
+		{
+			"id": 9,
+			"name": "Power Potion S",
+			"description": "Increses your S stat +2 for your next attack",
+			"effect": "increase",
+			"affected_stat": "S",
+			"amount": 2
+		}
+	]
+}

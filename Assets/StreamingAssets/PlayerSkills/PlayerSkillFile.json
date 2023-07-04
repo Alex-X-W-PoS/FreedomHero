@@ -1,0 +1,909 @@
+{
+	"playerSkills": [
+		{
+			"classIndex": 0,
+			"class_skills": [
+				{
+					"group": "L",
+					"skills": [
+						{
+							"name": "Arrow Shot", 
+							"description": "A normal arrow shot. Has no effect.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Double Arrow", 
+							"description": "Shoot two arrows.\nUse a Dice of Willpower (IV) to make extra dmg to same foe.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": true,
+								"damage_modfication": {
+									"type": "variable",
+									"modification": "D4",
+									"target": "same"
+								},
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Arrow Burst", 
+							"description": "Shoot multiple arrows.\nFully damages one target and makes half damage to\nother enemies.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": true,
+								"damage_modfication": {
+									"type": "fixed",
+									"modification": "0.5",
+									"target": "all"
+								},
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				},
+				{
+					"group": "H",
+					"skills": [
+						{
+							"name": "Charged Arrow", 
+							"description": "Store energy to fire a powerful arrow. No effect.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Flame Arrow", 
+							"description": "Arrow engulfed in flames.\nPosibility of burning the target.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Burn"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Poison Arrow", 
+							"description": "Arrow engulfed in flames.\nPosibility of poisoning the target.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 3,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Poison"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Freeze Arrow", 
+							"description": "Arrow engulfed in flames.\nPosibility of freezing the target.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Freeze"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				},
+				{
+					"group": "S",
+					"skills": [
+						{
+							"name": "Sureshot Arrow", 
+							"description": "A really powerful arrow shot. No effect.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Arrow Rain", 
+							"description": "Strong rain of arrows.\nHits all enemies.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 2,
+							"target": "all",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Double Hurricane", 
+							"description": "Wind skill produced by arrows.\nDeals same damage twice to the target.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 3,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": true,
+								"damage_modfication": {
+									"type": "fixed",
+									"modification": "1",
+									"target": "same"
+								},
+								"has_status_condition":false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Critical Shot", 
+							"description": "An arrow shot to an enemy's weakpoint\nInflicts bleed to the target.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "fixed",
+									"status": "Bleed"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"classIndex": 1,
+			"class_skills": [
+				{
+					"group": "L",
+					"skills": [
+						{
+							"name": "Arcane Shot", 
+							"description": "Basic magic attack. No effect.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Energy Beam", 
+							"description": "Middle level magic.\nUse a Dice of Willpower (IV) to make extra dmg to target.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": true,
+								"damage_modfication": {
+									"type": "variable",
+									"modification": "D4",
+									"target": "same"
+								},
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Fireball", 
+							"description": "Strong fire magic.\nPosibility of burning the target.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Burn"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				},
+				{
+					"group": "H",
+					"skills": [
+						{
+							"name": "Arcane Charge", 
+							"description": "Middle level magic charging. No effect.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Meteor", 
+							"description": "Powerful fire magic.\nPosibility of burning the target.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Burn"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Electric Discharge", 
+							"description": "Powerful thunder magic.\nPosibility of paralyzing the target.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 3,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Paralysis"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Absolute Zero", 
+							"description": "Powerful ice magic.\nPosibility of freezing the target.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Freeze"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				},
+				{
+					"group": "S",
+					"skills": [
+						{
+							"name": "Arcane Beam", 
+							"description": "Advanced arcane magic. No effect.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Fire Wall", 
+							"description": "Colossal fire magic to 1 enemy.\nPosibility of burning the target.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Burn"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Morpheus Touch", 
+							"description": "Call upon the Hand of Morpheous.\nPosibility of sleeping the target.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 3,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Sleep"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Electric Explosion", 
+							"description": "Maximum magic attack.\nParalyzes the target.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "fixed",
+									"status": "Paralysis"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"classIndex": 2,
+			"class_skills": [
+				{
+					"group": "L",
+					"skills": [
+						{
+							"name": "Sword Slash", 
+							"description": "Basic slash attack.\nNo effect.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Reinforce Hit", 
+							"description": "Strong hit.\nUse a Dice of Willpower (IV) to generate a shield to self.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification":false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": true,
+								"damage_mitigation": {
+									"amount": "D4",
+									"target": "self"
+								}
+							}
+						},
+						{
+							"name": "Vigorous Hit", 
+							"description": "Strong hit full of vigor.\nUse a Dice of Willpower (VI) to generate a shield to self.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification":false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": true,
+								"damage_mitigation": {
+									"amount": "D6",
+									"target": "self"
+								}
+							}
+						}
+					]
+				},
+				{
+					"group": "H",
+					"skills": [
+						{
+							"name": "Strong Slash", 
+							"description": "Strong slash attack. No effect.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Stunning Hit", 
+							"description": "Strong numbing hit.\nPosibility of paralyzing the target.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": true,
+								"status_condition": {
+									"type": "variable",
+									"status": "Paralysis"
+								},
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Reinforcmente", 
+							"description": "Attack with a reinforced armor.\nUse a Dice of Willpower (VI) to generate a shield to self.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 3,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": true,
+								"damage_mitigation": {
+									"amount": "D6",
+									"target": "self"
+								}
+							}
+						},
+						{
+							"name": "Divine Shield", 
+							"description": "Attack with the rays of the Divine.\nDamages 1 target.\nUse 2 Dice of Willpower (IV) to generate a shield to self.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": true,
+								"damage_mitigation": {
+									"amount": "2D4",
+									"target": "self"
+								}
+							}
+						}
+					]
+				},
+				{
+					"group": "S",
+					"skills": [
+						{
+							"name": "Beating Up", 
+							"description": "Attack the enemy without mercy. No effect.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Light Heal", 
+							"description": "Attack using Holy Magic.\nHeals half of damage inflicted.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": true,
+								"cure": {
+									"cure_type": "fixed",
+									"amount": "0.5",
+									"target": "self"
+								},
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Light Blessing", 
+							"description": "Attack with a blessing granted by the Divine itself.\nDamages 1 target.\nUse 2 Dice of Willpower (VI) to generate a shield to self.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 3,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": true,
+								"damage_mitigation": {
+									"amount": "2D6",
+									"target": "self"
+								}
+							}
+						},
+						{
+							"name": "Inspiring Banner",
+							"description": "Raise your Banner for a powerful attack.\nDamage all targets.\nUse a Dice of Willpower (XX) to generate a shield to self.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 4,
+							"target": "all",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": true,
+								"damage_mitigation": {
+									"amount": "D20",
+									"target": "self"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"classIndex": 3,
+			"class_skills": [
+				{
+					"group": "L",
+					"skills": [
+						{
+							"name": "Scratch", 
+							"description": "Basic attack. No effect.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Uppercut", 
+							"description": "Strong attack.\nUse a Dice of Willpower (IV) to deal extra damange to target.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification":true,
+								"damage_modfication": {
+									"type": "variable",
+									"modification": "D4",
+									"target": "same"
+								},
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": false,
+								"cure": null,
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Blood Sucking", 
+							"description": "Basic blood sucking attack.\nUse a Dice of Willpower (VI) to heal that amount of HP to self.\nConsumes 0 AP.",
+							"type": "L",
+							"ap_cost": 0,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification":false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": true,
+								"cure": {
+									"cure_type": "variable",
+									"amount": "D6",
+									"target": "self"
+								},
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				},
+				{
+					"group": "H",
+					"skills": [
+						{
+							"name": "Rip Off", 
+							"description": "Rip off the enemy's defenses. No effect.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Bleeding Hit", 
+							"description": "Hit that generates a source for blood.\nRecover half damage to self.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": true,
+								"cure": {
+									"cure_type": "fixed",
+									"amount": "0.5",
+									"target": "self"
+								},
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Blood Sharing", 
+							"description": "Strong blood attack.\nUse a Dice of Willpower (VI) to heal that amount of HP to self.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 3,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": true,
+								"cure": {
+									"cure_type": "variable",
+									"amount": "D6",
+									"target": "self"
+								},
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "All for One", 
+							"description": "Attack named after a convention of vampires.\nUse 2 Dice of Willpower (VI) to heal that amount of HP to self.\nConsumes 2 AP.",
+							"type": "H",
+							"ap_cost": 2,
+							"minimum_required": 4,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": true,
+								"cure": {
+									"cure_type": "variable",
+									"amount": "2D6",
+									"target": "self"
+								},
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				},
+				{
+					"group": "S",
+					"skills": [
+						{
+							"name": "Bat Summoning", 
+							"description": "Summon your bats to attack. No effect.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 1,
+							"target": "select_1",
+							"has_effect":false,
+							"effect": null
+						},
+						{
+							"name": "Wound Inflictor", 
+							"description": "Inflict a wound to your target.\nUse 2 Dice of Willpower (IV) to heal that amount of HP to self.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 2,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": true,
+								"cure": {
+									"cure_type": "variable",
+									"amount": "2D4",
+									"target": "self"
+								},
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "Blood Revenge", 
+							"description": "Take your bloody revenge on an enemy.\nUse a Dice of Willpower (XX) to heal that amount of HP to self.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 3,
+							"target": "select_1",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": true,
+								"cure": {
+									"cure_type": "variable",
+									"amount": "D20",
+									"target": "self"
+								},
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						},
+						{
+							"name": "One for All", 
+							"description": "Strongest vampire attack ever.\nDamages all enemies.\nUse a Dice of Willpower (XX) to heal that amount of HP to self.\nConsumes 3 AP.",
+							"type": "S",
+							"ap_cost": 3,
+							"minimum_required": 4,
+							"target": "all",
+							"has_effect":true,
+							"effect": {
+								"has_damage_modification": false,
+								"damage_modfication": null,
+								"has_status_condition": false,
+								"status_condition": null,
+								"has_cure": true,
+								"cure": {
+									"cure_type": "variable",
+									"amount": "D20",
+									"target": "self"
+								},
+								"has_damage_mitigation": false,
+								"damage_mitigation": null
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

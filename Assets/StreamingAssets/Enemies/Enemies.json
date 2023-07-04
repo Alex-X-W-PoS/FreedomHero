@@ -1,0 +1,124 @@
+{
+	"enemies": [
+		{
+			"Name": "Wolf",
+			"image": 0,
+			"HP": 40,
+			"Light_attack_stat": 2,
+			"Heavy_attack_stat": 2,
+			"Special_attack_stat": 0,
+			"heavy_numbers": "2,4",
+			"special_numbers": "0",
+			"skills": [
+				{
+					"name": "Scratch", 
+					"description": "",
+					"type": "L",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":false,
+					"effect": null
+				},
+				{
+					"name": "Bite", 
+					"description": "",
+					"type": "H",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":false,
+					"effect": null
+				}
+			]
+		},
+		{
+			"Name": "Poisonous Bee",
+			"image": 1,
+			"HP": 30,
+			"Light_attack_stat": 1,
+			"Heavy_attack_stat": 3,
+			"Special_attack_stat": 0,
+			"heavy_numbers": "3,5",
+			"special_numbers": "0",
+			"skills": [
+				{
+					"name": "Needle", 
+					"description": "",
+					"type": "L",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":false,
+					"effect": null
+				},
+				{
+					"name": "Poisonous Needle", 
+					"description": "",
+					"type": "H",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":true,
+					"effect": {
+						"has_damage_modification": false,
+						"damage_modfication": null,
+						"has_status_condition": true,
+						"status_condition": {
+							"type": "variable",
+							"status": "Poison"
+						},
+						"has_cure": false,
+						"cure": null,
+						"has_damage_mitigation": false,
+						"damage_mitigation": null
+					}
+				}
+			]
+		},
+		{
+			"Name": "Forest Spirit",
+			"image": 2,
+			"HP": 25,
+			"Light_attack_stat": 1,
+			"Heavy_attack_stat": 2,
+			"Special_attack_stat": 0,
+			"heavy_numbers": "6",
+			"special_numbers": "0",
+			"skills": [
+				{
+					"name": "Pound", 
+					"description": "",
+					"type": "L",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":false,
+					"effect": null
+				},
+				{
+					"name": "Sleep ", 
+					"description": "",
+					"type": "H",
+					"ap_cost": 0,
+					"minimum_required": 1,
+					"target": "select_1",
+					"has_effect":true,
+					"effect": {
+						"has_damage_modification": false,
+						"damage_modfication": null,
+						"has_status_condition": true,
+						"status_condition": {
+							"type": "variable",
+							"status": "Sleep"
+						},
+						"has_cure": false,
+						"cure": null,
+						"has_damage_mitigation": false,
+						"damage_mitigation": null
+					}
+				}
+			]
+		}
+	]
+}

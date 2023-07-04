@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5056596121244813920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5056596121244813921}
+  - component: {fileID: 5056596121244813924}
+  - component: {fileID: 5056596121244813927}
+  - component: {fileID: 5056596121244813926}
+  m_Layer: 5
+  m_Name: D20_Dice 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5056596121244813921
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056596121244813920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -92.5, y: -106}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5056596121244813924
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056596121244813920}
+  m_CullTransparentMesh: 0
+--- !u!114 &5056596121244813927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056596121244813920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 237fefba978c53e4bb77f9def47f46c5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5056596121244813926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056596121244813920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805ede3d446493b4e9f6d7537eea6e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceSides:
+  - {fileID: 21300000, guid: 237fefba978c53e4bb77f9def47f46c5, type: 3}
+  - {fileID: 21300000, guid: 20829cc4193e7ab4aa0aceaf0dae5bc3, type: 3}
+  - {fileID: 21300000, guid: 08911a415f9ca24409da778d1629cc4a, type: 3}
+  - {fileID: 21300000, guid: 25defc8ac1c47534eacb2926b5f30f48, type: 3}
+  - {fileID: 21300000, guid: 4bb91457b7f95b54ebc078be2ed9d883, type: 3}
+  - {fileID: 21300000, guid: 42d55b486fd8b6d4cace3083438df1c6, type: 3}
+  - {fileID: 21300000, guid: e38a4fa71ec762f4abff3dfc95572b71, type: 3}
+  - {fileID: 21300000, guid: ba6449d3a9ad19c48893b2e8a2665b28, type: 3}
+  - {fileID: 21300000, guid: 9cefabdb37351ac408e0d44cf0134db3, type: 3}
+  - {fileID: 21300000, guid: e2edd3123f1085b498dda3f4ae76980b, type: 3}
+  - {fileID: 21300000, guid: f9c14b69539ac994ab2753e651bd9dd3, type: 3}
+  - {fileID: 21300000, guid: 29f5fb8da8e62b2489d847a657d89110, type: 3}
+  - {fileID: 21300000, guid: 00bbafebb2d9223429a1d2a07265445c, type: 3}
+  - {fileID: 21300000, guid: cdcd11f024f75e349a65a4bf6e8dd07c, type: 3}
+  - {fileID: 21300000, guid: 14bf6a4649d82bb439b2c014d3cb4531, type: 3}
+  - {fileID: 21300000, guid: 830b6e8d007d9994a9210acb84e557f8, type: 3}
+  - {fileID: 21300000, guid: 8a69d00298b75524ab8e8087208853f7, type: 3}
+  - {fileID: 21300000, guid: 9d72dff936e63f945a01991503264255, type: 3}
+  - {fileID: 21300000, guid: 3e574ac5de3a0d549b72f1fe790ebdc9, type: 3}
+  - {fileID: 21300000, guid: 5b0b9afce7007d44fb315f9930ba42ee, type: 3}
+  finalResult: 0
